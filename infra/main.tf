@@ -1,10 +1,5 @@
 
 
-# ELIMINAR este bloque completo:
-resource "aws_s3_bucket_acl" "app_data" {
-  bucket = aws_s3_bucket.app_data.id
-  acl    = "public-read"
-}
 
 # AÑADIR en su lugar — bucket privado con versioning y cifrado:
 resource "aws_s3_bucket_versioning" "app_data" {
