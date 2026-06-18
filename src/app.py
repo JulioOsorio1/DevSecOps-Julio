@@ -64,11 +64,18 @@ def ping():
     )
     return jsonify({'output': result.stdout, 'error': result.stderr})
 
+#--
+def hash_password(password: str) -> str:
+    # MD5 es reversible con tablas rainbow. Usar bcrypt o argon2.
+    return hashlib.md5(password.encode()).hexdigest()
+
 
 # ❌ PROBLEMA 6: Algoritmo hash débil (MD5) — no apto para contraseñas
 def hash_password(password: str) -> str:
     # MD5 es reversible con tablas rainbow. Usar bcrypt o argon2.
     return hashlib.md5(password.encode()).hexdigest()
+#--
+
 
 
 # ❌ PROBLEMA 7: Path traversal — ruta de fichero controlada por el usuario
