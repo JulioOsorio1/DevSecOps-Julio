@@ -69,10 +69,10 @@ def ping():
  ==============================================================
  #SUPRESIÓN APROBADA — Equipo de Seguridad
  Ticket: SEC-042
-# Tipo: Falso positivo en contexto
+#Tipo: Falso positivo en contexto
 # Motivo: hash_password() se usa únicamente para caché de
 #   sesiones anónimas, no para almacenar contraseñas de usuario.
-#   El hash de contraseñas usa bcrypt en auth_service.py (línea 87).
+#   El hash de contraseñas usa bcrypt en auth_service.py #ínea 87).
 # Aprobado por: security-team@empresa.com
 # Creado: 2026-04-30 | Expira: 2026-10-30
 # ==============================================================
