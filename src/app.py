@@ -64,7 +64,7 @@ def ping():
     )
     return jsonify({'output': result.stdout, 'error': result.stderr})
 
-#----
+
 
  ==============================================================
  #SUPRESIÓN APROBADA — Equipo de Seguridad
@@ -76,14 +76,12 @@ def ping():
 # Aprobado por: security-team@empresa.com
 # Creado: 2026-04-30 | Expira: 2026-10-30
 # ==============================================================
-# nosemgrep: python.lang.security.insecure-hash-algorithms  # SEC-042
+nosemgrep: python.lang.security.insecure-hash-algorithms   SEC-042
 
-
-# ❌ PROBLEMA 6: Algoritmo hash débil (MD5) — no apto para contraseñas
 def hash_password(password: str) -> str:
     # MD5 es reversible con tablas rainbow. Usar bcrypt o argon2.
     return hashlib.md5(password.encode()).hexdigest()
-#----
+    
 
 
 
